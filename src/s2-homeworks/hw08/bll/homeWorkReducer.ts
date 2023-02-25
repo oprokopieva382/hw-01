@@ -12,14 +12,10 @@ export const homeWorkReducer = (
   switch (action.type) {
     case "sort": {
       if (action.payload === "up") {
-        return [...state].sort((a, b) => {
-          return a.name > b.name ? 1 : -1;
-        });
+        return [...state].sort((a, b) => (a.name > b.name ? 1 : -1));
       }
       if (action.payload === "down") {
-        return [...state].sort((a, b) => {
-          return a.name < b.name ? 1 : -1;
-        });
+        return [...state].sort((a, b) => (a.name < b.name ? 1 : -1));
       }
       return state;
     }
