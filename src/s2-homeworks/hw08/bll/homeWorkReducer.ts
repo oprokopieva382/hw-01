@@ -8,7 +8,7 @@ export const homeWorkReducer = (
   state: UserType[],
   action: ActionType
 ): UserType[] => {
-  // need to fix any
+ 
   switch (action.type) {
     case "sort": {
       if (action.payload === "up") {
@@ -30,7 +30,7 @@ export const homeWorkReducer = (
       return state;
     }
     case "check": {
-      return state.filter((el) => el.age > action.payload); // need to fix
+      return state.filter((el) => el.age > action.payload); 
     }
     default:
       return state;
