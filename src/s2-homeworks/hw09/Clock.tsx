@@ -12,9 +12,8 @@ function Clock() {
   const [show, setShow] = useState<boolean>(false);
 
   const start = () => {
-    console.log("hi");
-    let interval = setInterval(() => setDate(new Date()));
-    setTimerId(+interval);
+    let interval = setInterval(() => setDate(new Date()), 1000);
+    setTimerId(Number(interval));
     setShow(true);
   };
   // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
