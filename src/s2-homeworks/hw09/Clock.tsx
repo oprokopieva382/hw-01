@@ -13,7 +13,7 @@ function Clock() {
 
   const start = () => {
     console.log("hi");
-    let interval = setInterval(() => setDate(new Date()), 1000);
+    let interval = setInterval(() => setDate(new Date()));
     setTimerId(+interval);
     setShow(true);
   };
@@ -43,7 +43,7 @@ function Clock() {
   const stringDate = date.toLocaleDateString("fr-CH", {
     day: "2-digit",
     month: "2-digit",
-    year: "numeric"
+    year: "numeric",
   }) || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
   console.log(stringDate);
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
