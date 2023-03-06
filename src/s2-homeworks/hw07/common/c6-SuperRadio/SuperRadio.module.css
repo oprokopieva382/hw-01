@@ -1,18 +1,20 @@
 .radio {
-  display: flex;
-  flex-direction: column;
+  margin: 0 11px 20px 0;
 }
 
 .radio::before {
 }
 
 .radio:checked::before {
+  color: #0066cc;
 }
 
 .label {
 }
 
 .options {
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
