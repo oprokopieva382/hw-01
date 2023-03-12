@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppStoreType } from "./bll/store";
-import { loadingAC, LoadingActionType } from "./bll/loadingReducer";
+import { InitialStateType, loadingAC, LoadingActionType } from "./bll/loadingReducer";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
 import s2 from "../../s1-main/App.module.css";
 import { Loader } from "./Loader";
@@ -14,8 +14,8 @@ import { Loader } from "./Loader";
  * */
 
 const HW10 = () => {
-  // useSelector, useDispatch // пишет студент
-  let loading = useSelector<AppStoreType, LoadingActionType>(
+
+  let loading = useSelector<AppStoreType, InitialStateType>(
     (state) => state.loading
   );
   const dispatch = useDispatch();
